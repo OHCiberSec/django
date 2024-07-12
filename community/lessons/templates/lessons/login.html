@@ -1,0 +1,20 @@
+<!-- lessons/templates/lessons/login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'lessons/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+        <p>Registrate <a href="{% url 'register' %}">Registra aqui </a></p>
+    </div>
+</body>
+</html>

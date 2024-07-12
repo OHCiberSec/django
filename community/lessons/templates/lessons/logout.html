@@ -1,0 +1,17 @@
+<!-- lessons/templates/lessons/logout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logout</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'lessons/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Logout</h2>
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
